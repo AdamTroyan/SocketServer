@@ -1,83 +1,153 @@
-# Socket File Management Server
+# SocketServer
 
-This Python application implements a socket server that allows remote control over file operations, such as listing, deleting, copying files, executing programs, and taking screenshots.
+A powerful Python-based remote administration tool using socket connections for system control and file management.
 
-## Features
+## 🚀 Features
 
-- List files in a directory
-- Delete specified files
-- Copy files from one location to another
-- Execute programs
-- Take screenshots
+- **Remote File Management**: List, delete, and copy files remotely
+- **Program Execution**: Execute programs and system commands
+- **Screenshot Capture**: Take and transfer screenshots
+- **Socket Communication**: Robust client-server architecture
+- **Cross-Platform Support**: Works on Windows, Linux, and macOS
+- **System Administration**: Remote system control and management
 
-## Requirements
+## 🛠️ Technologies
 
-- **Python:** 3.x
-- **Required libraries:**
-  - `pyautogui`
+- **Language**: Python 3
+- **Networking**: Socket programming
+- **Libraries**: pyautogui, subprocess, shutil, glob
+- **Architecture**: Client-Server model
 
-## Installation
+## 📋 Requirements
 
-1. Clone the repository or download the source code.
-2. Install the required libraries using pip:
+- Python 3.6 or later
+- `pyautogui` library for screenshot functionality
+- Network connectivity between client and server
+
+## 🚀 Getting Started
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AdamTroyan/SocketServer.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd SocketServer
+   ```
+
+3. Install required dependencies:
    ```bash
    pip install pyautogui
    ```
 
-## Usage
+### Usage
 
-1. **Run the server:**
-   ```bash
-   python server.py
-   ```
+#### Starting the Server
+```bash
+python server.py
+```
 
-2. **Connect a client to the server and issue commands in the following format:**
-   - **List files:** 
-     ```
-     dir <path>
-     ```
-   - **Delete file:** 
-     ```
-     delete <file_path>
-     ```
-   - **Copy file:** 
-     ```
-     copy <source_path> <destination_path>
-     ```
-   - **Execute program:** 
-     ```
-     execute <file_path>
-     ```
-   - **Take screenshot:** 
-     ```
-     take_screenshot
-     ```
-   - **Exit:** 
-     ```
-     exit
-     ```
+#### Available Commands
 
-## Example Commands
+- **List files:** 
+  ```
+  dir <path>
+  ```
+- **Delete file:** 
+  ```
+  delete <file_path>
+  ```
+- **Copy file:** 
+  ```
+  copy <source_path> <destination_path>
+  ```
+- **Execute program:** 
+  ```
+  execute <file_path>
+  ```
+- **Execute program:** 
+  ```
+  execute <file_path>
+  ```
+- **Take screenshot:** 
+  ```
+  take_screenshot
+  ```
+- **Exit connection:** 
+  ```
+  exit
+  ```
 
-- **To list files in a directory:**
+## 📁 Project Structure
+
+```
+SocketServer/
+├── server.py                  # Main server application
+├── client.py                  # Client connection script
+├── LICENSE                    # License information
+└── README.md                  # Project documentation
+```
+
+## 🎯 Example Usage
+
+- **List directory contents:**
   ```bash
-  dir C:\Users\YourUsername\Documents
+  dir C:\Users\Username\Documents
   ```
 
-- **To delete a file:**
+- **Delete a file:**
   ```bash
-  delete C:\Users\YourUsername\Documents\example.txt
+  delete C:\Users\Username\Documents\example.txt
   ```
 
-- **To copy a file:**
+- **Copy files:**
   ```bash
-  copy C:\Users\YourUsername\Documents\example.txt C:\Users\YourUsername\Documents\copy_example.txt
+  copy C:\source.txt C:\destination.txt
   ```
 
-- **To execute a program:**
+- **Execute programs:**
+  ```bash
+  execute C:\Path\To\Program.exe
   ```
-  execute C:\Path\To\Your\Program.exe
+
+- **Capture screenshot:**
+  ```bash
+  take_screenshot
   ```
+
+## ⚠️ Security Considerations
+
+- **Legal Use Only**: This tool is for legitimate system administration
+- **Network Security**: Use only on networks you own and control
+- **Authentication**: Consider implementing authentication for production use
+- **Firewall**: Configure appropriate firewall rules
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Adam Troyan** - [GitHub Profile](https://github.com/AdamTroyan)
+
+## ⚖️ Legal Notice
+
+This software is intended for legitimate system administration purposes only. Users are responsible for complying with all applicable laws and regulations.
+
+---
+
+*Built with ❤️ for system administration and remote management*
 
 - **To take a screenshot:**
   ```
